@@ -19,8 +19,9 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireLowercase = true;
     opt.Password.RequireUppercase = true;
 
-    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
-    opt.Lockout.MaxFailedAccessAttempts = 3;
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromSeconds(10);
+    opt.Lockout.MaxFailedAccessAttempts = 30;
+    opt.Lockout.AllowedForNewUsers = true;
 
     opt.User.AllowedUserNameCharacters = default;
     opt.User.RequireUniqueEmail = true;

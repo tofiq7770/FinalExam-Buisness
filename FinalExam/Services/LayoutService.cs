@@ -1,4 +1,5 @@
 ﻿using FinalExam.DAL;
+using Microsoft.EntityFrameworkCore;
 
 namespace FinalExam.Services
 {
@@ -11,11 +12,11 @@ namespace FinalExam.Services
             _context = context;
         }
 
-        //public async Task<Dictionary<string, string>> GetSettingAsync()
-        //{
-        //    Dictionary<string, string> settings = await _context.Settings.ToDictionaryAsync(s => s.Key, s => s.Value);
-        //    return settings;
-        //}
+        public async Task<Dictionary<string, string>> GetSettingAsync()
+        {
+            Dictionary<string, string> settings = await _context.Settings.ToDictionaryAsync(s => s.Key, s => s.Value);
+            return settings;
+        }
 
     }
 }

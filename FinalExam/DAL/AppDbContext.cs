@@ -11,5 +11,6 @@ namespace FinalExam.DAL
                 
         }
         public DbSet<Blog> Blogs { get; set; }
+        public DbSet<Setting> Settings { get; set; }
     }
 }
