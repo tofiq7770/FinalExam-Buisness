@@ -24,8 +24,13 @@
                             </div>
                             <div class="form-group">
                                 <label asp-for="UserName">UserName</label>
-                                <input asp-for="UserName" type="text"  class="form-control form-control-lg" placeholder="Username">
+                                <input asp-for="UserName" type="text" class="form-control form-control-lg" placeholder="Username">
                                 <span asp-validation-for="UserName"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email">Email</label>
+                                <input asp-for="Email" type="email" class="form-control form-control-lg" placeholder="Email">
+                                <span asp-validation-for="Email"></span>
                             </div>
                             <div class="form-group">
                                 <label asp-for="Password">Password</label>
