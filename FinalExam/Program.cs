@@ -10,6 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("default"))
 );
+
 builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
 {
     opt.Password.RequireNonAlphanumeric = false;
@@ -18,7 +19,7 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
     opt.Password.RequireLowercase = true;
     opt.Password.RequireUppercase = true;
 
-    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(3);
+    opt.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(2);
     opt.Lockout.MaxFailedAccessAttempts = 3;
 
     opt.User.AllowedUserNameCharacters = default;
@@ -30,9 +31,15 @@ builder.Services.ConfigureApplicationCookie(con => { con.LoginPath = $"/Admin/Ac
 var app = builder.Build();
 
 
+app.UseHttpsRedirection();
 
 app.UseRouting();
+
 app.UseStaticFiles();
+
+app.UseAuthentication();
+
+app.UseAuthorization();
 
 
 app.UseEndpoints(endpoints =>

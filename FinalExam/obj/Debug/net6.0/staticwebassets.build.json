@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TnsSGieC7qrfWqn/S2CG9tsT4GglfZ43DJ+JZSVD56g=",
+  "Hash": "GbRRczxEpmYpIxhUax7nhgY+eqS9OetntsHuLYA+7hg=",
   "Source": "FinalExam",
   "BasePath": "_content/FinalExam",
   "Mode": "Default",
@@ -2449,6 +2449,25 @@
       "OriginalItemSpec": "wwwroot\\assets\\images\\blog\\2.jpg"
     },
     {
+      "Identity": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\assets\\images\\blog\\22e7b4a2-19aa-4821-9cf6-20f1b9322fab1f1479a26222c26c9d228f73be3c2b67.jpg",
+      "SourceId": "FinalExam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\",
+      "BasePath": "_content/FinalExam",
+      "RelativePath": "assets/images/blog/22e7b4a2-19aa-4821-9cf6-20f1b9322fab1f1479a26222c26c9d228f73be3c2b67.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\blog\\22e7b4a2-19aa-4821-9cf6-20f1b9322fab1f1479a26222c26c9d228f73be3c2b67.jpg"
+    },
+    {
       "Identity": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\assets\\images\\blog\\3.jpg",
       "SourceId": "FinalExam",
       "SourceType": "Discovered",
@@ -2466,6 +2485,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\images\\blog\\3.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\assets\\images\\blog\\90d3131d-da9c-4377-863e-d98497c66935images.jpg",
+      "SourceId": "FinalExam",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\",
+      "BasePath": "_content/FinalExam",
+      "RelativePath": "assets/images/blog/90d3131d-da9c-4377-863e-d98497c66935images.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\images\\blog\\90d3131d-da9c-4377-863e-d98497c66935images.jpg"
     },
     {
       "Identity": "C:\\Users\\ca.r215.13\\Desktop\\FinalExam\\FinalExam\\wwwroot\\assets\\images\\blog\\b6.jpg",

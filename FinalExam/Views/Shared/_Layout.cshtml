@@ -63,6 +63,16 @@
                                 <li class="nav-item">
                                     <a class="page-scroll" href="#contact">Contact</a>
                                 </li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li class ="nav-item"><a asp-action="logout" asp-controller="account" asp-area="Admin" class="page-scroll">Logout</a></li>
+
+                                }
+                                else
+                                {
+                                    <li class="nav-item"><a asp-action="login" asp-controller="account" asp-area="Admin" class="page-scroll">Login</a></li>
+                                    <li class="nav-item"><a asp-action="register" asp-controller="account" asp-area="Admin" class="page-scroll">Register</a></li>
+                                }
                             </ul>
                         </div>
 

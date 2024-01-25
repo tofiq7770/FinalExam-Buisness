@@ -1,0 +1,54 @@
+﻿@model RegisterVM
+
+<div class="container-scroller">
+    <div class="container-fluid page-body-wrapper full-page-wrapper">
+        <div class="content-wrapper d-flex align-items-center auth px-0">
+            <div class="row w-100 mx-0">
+                <div class="col-lg-12 mx-auto">
+                    <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+                        <div class="brand-logo">
+                            <img src="~/admin/images/logo.svg" alt="logo">
+                        </div>
+                        <h6 class="font-weight-light">Signing up is easy. It only takes a few steps</h6>
+                        <form class="pt-3" method="post">
+                            <div asp-validation-summary="ModelOnly"></div>
+                            <div class="form-group">
+                                <label asp-for="Name">Name</label>
+                                <input asp-for="Name" type="text" class="form-control form-control-lg" placeholder="Name">
+                                <span asp-validation-for="Name"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Surname">Surname</label>
+                                <input asp-for="Surname" type="text" class="form-control form-control-lg" placeholder="Surname">
+                                <span asp-validation-for="Surname"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="UserName">UserName</label>
+                                <input asp-for="UserName" type="text"  class="form-control form-control-lg" placeholder="Username">
+                                <span asp-validation-for="UserName"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password">Password</label>
+                                <input asp-for="Password" type="password" class="form-control form-control-lg" placeholder="Password">
+                                <span asp-validation-for="Password"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword">Confirm Password</label>
+                                <input asp-for="ConfirmPassword" type="password" class="form-control form-control-lg" placeholder="Confirm Password">
+                                <span asp-validation-for="ConfirmPassword"></span>
+                            </div>
+                            <div class="mt-3">
+                                <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN UP</button>
+                            </div>
+                            <div class="text-center mt-4 font-weight-light">
+                                Already have an account? <a asp-action="login" asp-controller="account" class="text-primary">Login</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+</div>
