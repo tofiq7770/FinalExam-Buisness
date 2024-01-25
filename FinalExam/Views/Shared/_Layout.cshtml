@@ -1,4 +1,8 @@
-﻿
+﻿@using FinalExam.Services
+@inject LayoutService service
+@{
+    Dictionary<string, string> settings = await service.GetSettingAsync();
+}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -152,7 +156,7 @@
                                     <input name="EMAIL" placeholder="Email address" required="required" type="email" />
                                     <div class="button">
                                         <button class="sub-btn">
-                                            <i class="lni lni-envelope"></i>
+                                            @Html.Raw(settings["Mail"])
                                         </button>
                                     </div>
                                 </form>

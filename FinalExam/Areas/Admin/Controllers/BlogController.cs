@@ -25,8 +25,6 @@ namespace FinalExam.Areas.Admin.Controllers
             _env = env;
         }
 
-        public IWebHostEnvironment Env { get; }
-
         public async Task<IActionResult> Index()
         {
             List<Blog> blogs = await _context.Blogs.ToListAsync();
@@ -63,6 +61,7 @@ namespace FinalExam.Areas.Admin.Controllers
             {
                 Name = create.Name,
                 Description = create.Description,
+                Title = create.Title,
                 Image = await create.Photo.CreateFile(_env.WebRootPath, "assets", "images","blog")
             };
             await _context.Blogs.AddAsync(blog);
@@ -78,6 +77,7 @@ namespace FinalExam.Areas.Admin.Controllers
             {
                 Name = blog.Name,
                 Description = blog.Description,
+                Title = blog.Title,
                 Image = blog.Image,
             };
 
@@ -110,6 +110,7 @@ namespace FinalExam.Areas.Admin.Controllers
             }
             blogs.Name = update.Name;
             blogs.Description = update.Description;
+            blogs.Title = update.Title;
 
             await _context.SaveChangesAsync();
 

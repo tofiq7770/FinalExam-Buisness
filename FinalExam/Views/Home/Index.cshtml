@@ -1,5 +1,10 @@
 ﻿@using FinalExam.Models
+@using FinalExam.Services
 
+@inject LayoutService service
+@{
+    Dictionary<string, string> settings = await service.GetSettingAsync();
+}
 
 <!--====== NAVBAR NINE PART ENDS ======-->
 <!--====== SIDEBAR PART START ======-->
@@ -272,7 +277,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-services">
                     <div class="service-icon">
-                        <i class="lni lni-capsule"></i>
+                        @Html.Raw(settings["Design"])
                     </div>
                     <div class="service-content">
                         <h4>Refreshing Design</h4>
@@ -286,7 +291,8 @@
             <div class="col-lg-4 col-md-6">
                 <div class="single-services">
                     <div class="service-icon">
-                        <i class="lni lni-bootstrap"></i>
+                        @Html.Raw(settings["Bootstrap"])
+
                     </div>
                     <div class="service-content">
                         <h4>Solid Bootstrap 5</h4>
@@ -528,12 +534,12 @@
                             <a href="javascript:void(0)"><img class="thumb" src="~/assets/images/blog/@item.Image" alt="Blog" /></a>
                             <div class="meta-details">
                                 <img class="thumb" src="~/assets/images/blog/@item.Image" alt="Author" />
-                                <span>BY TIM NORTON</span>
+                                <span>@item.Name</span>
                             </div>
                         </div>
                         <div class="content-body">
                             <h4 class="title">
-                                <a href="javascript:void(0)"> @item.Name </a>
+                                <a href="javascript:void(0)"> @item.Title </a>
                             </h4>
                             <p>
                                 @item.Description

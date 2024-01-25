@@ -1,4 +1,4 @@
-﻿@model List<Blog>
+﻿@model List<Setting>
 
 @{
     int count = 0;
@@ -9,7 +9,6 @@
         <div class="card-body">
             <h4 class="card-title">Blog Table</h4>
 
-            <a asp-action="Create" asp-controller="Blog" class="btn btn-success">Create Blog</a>
 
             <div class="table-responsive">
                 <table class="table table-striped">
@@ -19,16 +18,10 @@
                                 No
                             </th>
                             <th>
-                                Image
+                                Key
                             </th>
                             <th>
-                                Name
-                            </th>
-                            <th>
-                                Title
-                            </th>
-                            <th>
-                                Description
+                                Value
                             </th>
                             <th>
                                 Settings
@@ -36,7 +29,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (Blog item in Model)
+                        @foreach (Setting item in Model)
                         {
                             count++;
                             <tr>
@@ -44,20 +37,14 @@
                                     @count
                                 </td>
                                 <td>
-                                    <img src="~/assets/images/blog/@item.Image" />
+                                    @item.Key
                                 </td>
                                 <td>
-                                    @item.Name
+                                    @item.Value
                                 </td>
                                 <td>
-                                    @item.Title
-                                </td>
-                                <td>
-                                    @item.Description
-                                </td>
-                                <td>
-                                    <a asp-action="Update" asp-controller="Blog" asp-route-id="@item.Id" class="btn btn-primary"><i class="mdi mdi-grease-pencil"></i></a>
-                                    <a asp-action="Delete" asp-controller="Blog" asp-route-id="@item.Id" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>
+
+                                    <a asp-action="Update" asp-controller="Setting" asp-route-id="@item.Id" class="btn btn-primary"><i class="mdi mdi-grease-pencil"></i></a>
                                 </td>
                             </tr>
                         }
